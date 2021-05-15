@@ -4,8 +4,8 @@
 **Description:** Disguise your notifications
 
 ## Update by Redentic
-Asked by `u/RUGMJ7443` [on Reddit](https://www.reddit.com/r/jailbreak/comments/nai8t8/request_could_someone_update_notimask_for_ios_14/)  
-Package available [here](packages/com.dunkston.notimask_1.1.0-34+debug_iphoneos-arm.deb)
+Asked by `u/RUGMJ7443` [on Reddit](https://www.reddit.com/r/jailbreak/comments/nai8t8/request_could_someone_update_notimask_for_ios_14/).  
+Package available [here](packages/com.dunkston.notimask_1.1.0-34+debug_iphoneos-arm.deb), without-icon version [here](packages/com.dunkston.notimask_1.1.0-1+debug_iphoneos-arm.deb).
 
 ### Changelog
 - Semi-rewrite to support iOS 12+
