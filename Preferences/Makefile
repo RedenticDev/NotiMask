@@ -1,9 +1,11 @@
+ARCHS = arm64 arm64e
+TARGET = iphone:clang:13.3:13.3
+
 include $(THEOS)/makefiles/common.mk
 
 BUNDLE_NAME = NotiMaskPreferences
 NotiMaskPreferences_FILES = $(wildcard *.m)
 NotiMaskPreferences_INSTALL_PATH = /Library/PreferenceBundles
-NotiMaskPreferences_FRAMEWORKS = UIKit
 NotiMaskPreferences_PRIVATE_FRAMEWORKS = Preferences
 
 include $(THEOS_MAKE_PATH)/bundle.mk

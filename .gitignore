@@ -1,6 +1,3 @@
-#Ignore .DS_Store
 .DS_Store
-
-#Ignore Theos folders
 .theos/
-obj/
+.vscode/

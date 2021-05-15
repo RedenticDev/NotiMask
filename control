@@ -1,9 +1,9 @@
 Package: com.dunkston.notimask
 Name: NotiMask
 Depends: mobilesubstrate, applist
-Version: 1.0
+Version: 1.1.0
 Architecture: iphoneos-arm
 Description: Disguise your notifications
-Maintainer: dunkston
+Maintainer: RedenticDev <redenticdev@gmail.com>
 Author: dunkston
 Section: Tweaks

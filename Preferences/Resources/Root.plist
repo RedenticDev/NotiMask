@@ -3,7 +3,7 @@
 <plist version="1.0">
 <dict>
 	<key>title</key>
-	<string>Edit Mask</string>
+	<string>NotiMask</string>
 	<key>items</key>
 	<array>
 		<dict>
@@ -18,11 +18,11 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Masked Apps</string>
+			<string>Apps to spoof</string>
 			<key>ALSettingsKeyPrefix</key>
 			<string>enabled-</string>
 			<key>ALSettingsPath</key>
-			<string>/var/mobile/Library/Preferences/com.dunkston.notimask.plist</string>
+			<string>/var/mobile/Library/Preferences/com.dunkston.notimask-applist.plist</string>
 			<key>ALSectionDescriptors</key>
 			<array>
 				<dict>
@@ -61,7 +61,7 @@
 					<key>key</key>
 					<string>@@DISPLAYIDENTIFIER@@</string>
 					<key>footer-title</key>
-					<string>NotiMask by dunkston</string>
+					<string>NotiMask by dunkston &amp; RedenticDev</string>
 				</dict>
 			</array>
 		</dict>
@@ -69,9 +69,9 @@
 			<key>cell</key>
 			<string>PSGroupCell</string>
 			<key>label</key>
-			<string>Fake Notification</string>
+			<string>Spoof</string>
 			<key>footerText</key>
-			<string>- dunkston -</string>
+			<string>- dunkston &amp; RedenticDev -</string>
 			<key>footerAlignment</key>
 			<integer>1</integer>
 		</dict>
@@ -83,7 +83,7 @@
 			<key>isController</key>
 			<true/>
 			<key>label</key>
-			<string>Fake App</string>
+			<string>Replace by App</string>
 			<key>ALSingleEnabledMode</key>
 			<true/>
 			<key>ALSettingsKey</key>
@@ -91,7 +91,7 @@
 			<key>ALChangeNotification</key>
 			<string>com.dunkston.notimask.preferencesChanged</string>
 			<key>ALSettingsPath</key>
-			<string>/var/mobile/Library/Preferences/com.dunkston.notimask.plist</string>
+			<string>/var/mobile/Library/Preferences/com.dunkston.notimask-applist.plist</string>
 			<key>ALSectionDescriptors</key>
 			<array>
 				<dict>
@@ -118,23 +118,21 @@
 					<key>cell-class-name</key>
 					<string>ALCheckCell</string>
 					<key>footer-title</key>
-					<string>NotiMask by dunkston</string>
+					<string>NotiMask by dunkston &amp; RedenticDev</string>
 				</dict>
 			</array>
 		</dict>
 		<dict>
 			<key>cell</key>
-			<string>PSEditTextCell</string>
-			<key>detail</key>
-			<string>PSDetailController</string>
+			<string>PSSwitchCell</string>
+			<key>default</key>
+			<true />
 			<key>defaults</key>
 			<string>com.dunkston.notimask</string>
-			<key>label</key>
-			<string>Title</string>
 			<key>key</key>
-			<string>title</string>
-			<key>placeholder</key>
-			<string>orig for original text</string>
+			<string>hideAttachements</string>
+			<key>label</key>
+			<string>Hide attachments</string>
 			<key>PostNotification</key>
 			<string>com.dunkston.notimask.preferencesChanged</string>
 		</dict>
@@ -146,13 +144,50 @@
 			<key>defaults</key>
 			<string>com.dunkston.notimask</string>
 			<key>label</key>
-			<string>Message</string>
+			<string>Fake Title</string>
+			<key>key</key>
+			<string>title</string>
+			<key>placeholder</key>
+			<string>Type $orig$ for original text</string>
+			<key>PostNotification</key>
+			<string>com.dunkston.notimask.preferencesChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSEditTextCell</string>
+			<key>detail</key>
+			<string>PSDetailController</string>
+			<key>defaults</key>
+			<string>com.dunkston.notimask</string>
+			<key>label</key>
+			<string>Fake Message</string>
 			<key>key</key>
 			<string>message</string>
 			<key>placeholder</key>
-			<string>orig for original text</string>
+			<string>Type $orig$ for original text</string>
 			<key>PostNotification</key>
 			<string>com.dunkston.notimask.preferencesChanged</string>
+		</dict>
+		<dict>
+			<key>cell</key>
+			<string>PSButtonCell</string>
+			<key>label</key>
+			<string>Clear fields</string>
+			<key>action</key>
+			<string>clearFields:</string>
+			<key>isDestructive</key>
+			<true />
+			<key>confirmation</key>
+			<dict>
+				<key>prompt</key>
+				<string>Do you really want to clear text fields?</string>
+				<key>title</key>
+				<string>Confirm</string>
+				<key>okTitle</key>
+				<string>Confirm</string>
+				<key>cancelTitle</key>
+				<string>Cancel</string>
+			</dict>
 		</dict>
 	</array>
 </dict>
